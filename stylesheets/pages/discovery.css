@@ -2,6 +2,7 @@
 
 /* 로고 */
 .logo {
+    margin-top: 100px;
     width: 176px;
     height: 40px;
     margin-bottom: 54px;
@@ -16,6 +17,29 @@
     position: relative;
 }
 
+/* 상품 테두리 포커스나 호버 시에 색깔 바꿈 */
+.item:focus-within, .item:hover {
+    border-color: var(--blue);
+}
+
+/* 상품 테두리 포커스나 호버 시에 버튼 사이즈 및 색상 바꿈 */
+.item:hover .buybutton, 
+.item:focus-within .buybutton {
+    width: 112px;
+    background-color: var(--blue);
+    opacity: 100%;
+}
+
+/* 상품 테두리 포커스나 호버 시에 글자 바꿈*/
+.item:hover .buybutton a::before,
+.item:focus-within .buybutton a::before {
+    content: "구매하기 \00a0\00a0\00a0>";
+    line-height: 42px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* 상품 영역 */
 article {
     width: 1020px;
     height: 958px;
@@ -66,6 +90,7 @@ article {
     margin: 0;
 }
 
+/* 상품 테두리 안 구매하기 버튼 */
 .buybutton {
     width: 42px;
     height: 42px;
@@ -75,29 +100,22 @@ article {
     bottom: 20px;
     text-align: center;
     opacity: 0.8;
-    transition-property: all;
-    transition-duration: 0.8s;
+    transition: width 1s;
 }
 
-.buybutton:focus-within, .buybutton:hover {
-    left: 22px;
-    bottom: 20px;
-    width: 112px;
-    background-color: var(--blue);
-    opacity: 100%;
+/* 상품 테두리 안 구매하기 버튼 링크 */
+.buybutton a {
+    display: block;
+    line-height: 42px;
+    width: 100%;
+    height: 100%;
+    color: var(--anchor-color);
 }
 
-.buybutton:focus-within::before, .buybutton:hover::before {
-    content: "구매하기 \00a0\00a0\00a0>";
+/* 상품 테두리 안 구매하기 버튼 링크 활성화 전 상태 */
+.buybutton a::before {
+    content: ">";
     line-height: 42px;
     font-size: 14px;
     color: #ffffff;
-}
-
-.buybutton a {
-    line-height: 42px;
-    display: inline-block;
-    width: inherit;
-    height: inherit;
-    color: var(--anchor-color);
 }
