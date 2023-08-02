@@ -47,15 +47,17 @@ body {
     gap: 24px;
 } 
 
-.header-bar > .buttons > #heart {
-    width: 30px;
-    height: 23px;
-    margin-top: 1.5px;
+#post-like {
+    cursor: pointer;
 }
 
+#post-like:hover {
+    color: red;
+}
 
-.story-tray {
-
+#fill-heart {
+    display: none;
+    fill: red;
 }
 
 .user-header {
