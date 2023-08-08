@@ -1,0 +1,231 @@
+/* 헤더 */
+.LoginBar {
+    height: 24px;
+    background: var(--gray-100, #F3F3F3);
+    width: 1920px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.LoginBarList {
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 8px;
+}
+
+.LoginBarList li {
+    margin-top: 5px;
+    color: var(--black, #181818);
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 14.4px */
+}
+
+.LoginBarList li:first-child {
+    margin-left: 728px;
+    order: 3;
+}
+
+.LoginBarList li:nth-child(2) {
+    order: 4;
+}
+
+.LoginBarList li:nth-child(3) {
+    order: 5;
+}
+
+.MainHeader {
+    display: grid;
+    grid-template-areas: 
+    "bc lg se mc ca"
+    "bc tn tn mc ca";
+
+}
+
+.button--category {
+    background-image: url(/미션4/assets/icon/hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: top 30px center;
+    background-size: 30px;
+    display: flex;
+    width: 110px;
+    padding: 30px 32.5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    background-color: var(--blue-600, #0074E9);
+    grid-area: bc;
+}
+
+.button--category span {
+    width: 45px;
+    height: 14px;
+    color: var(--grayscale-white-white, #FFF);
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 42px;
+}
+
+.logo {
+    background: url(/미션4/assets/logo/logo.svg) no-repeat center center;
+    background-size: contain;
+    width: 176px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-top: 34px;
+    margin-left: 40px;
+    margin-right: 30px;
+    grid-area: lg;
+}
+
+.logo h1 {
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.search {
+    border: 1px solid blue;
+    height: 42px;
+    flex-shrink: 0;
+    width: 520px;
+    margin-top: 34px;
+    grid-area: se;
+}
+
+.search form {
+    width: 516px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    width: 130px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+#searchOptions {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 20px;
+    padding-left: 12px;
+    position: relative;
+    width: 135px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    z-index: 1;
+    color: var(--gray-700, #767676);
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 0;
+}
+
+#searchBar {
+    height: 38px;
+    width: 300px;
+    flex-shrink: 0;
+    border: 0;
+    padding: 0;
+    color: var(--gray-600, #AAA9A9);
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+.IconMic, .IconSearch {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    
+}
+
+.personal {
+    width: 90px;
+    height: 58px;
+    padding: 0px 22px 4px 22px;
+    background-image: url(/미션4/assets/icon/my-coupang.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: transparent;
+    border: none;
+    color: var(--black, #181818);
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 34px;
+}
+
+.myCoupang {
+    grid-area: mc;
+}
+
+.cart {
+    background-image: url(/미션4/assets/icon/cart.svg);
+    grid-area: ca;
+}
+
+.personal span {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.TypeNavigation {
+    height: 26px;
+    width: 755px;
+    grid-area: tn;
+}
+
+.TypeNavigation div{
+    display: inline-block;
+    gap: 2px;
+    list-style: none;
+    color: var(--black, #181818);
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    height: 26px;
+    padding: 6px 14px;
+    text-align: center;
+}
+
+.TypeNavigation .long {
+    padding: 6px 7px 6px 6px;
+}
+
+.TypeNavigation .short {
+    padding: 6px 20px 6px 19px;
+}
