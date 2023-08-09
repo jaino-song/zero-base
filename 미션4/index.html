@@ -18,7 +18,7 @@
     <!--상단 로그인 바-->
     <div class="LoginBar">
       <ul class="LoginBarList">
-        <li><a href="/">로그인</a></li>
+        <li class="first"><a href="/">로그인</a></li>
         <li><a href="/">회원가입</a></li>
         <li><a href="/">고객센터</a></li>
         <li><a href="/">쿠팡플레이</a></li>
@@ -65,42 +65,62 @@
         <button class="personal myCoupang">
           <span>마이쿠팡</span>
         </button>
-        <!--
+        <div class="is--active">
           <ul>
-          <li><a href="/">주문목록</a></li>
-          <li><a href="/">취소/반품</a></li>
-          <li><a href="/">찜리스트</a></li>
-        </ul>-->
+            <li><a href="/">주문목록</a></li>
+            <li><a href="/">취소/반품</a></li>
+            <li><a href="/">찜리스트</a></li>
+          </ul>
+        </div>
 
       <!--장바구니 버튼-->
         <button class="personal cart">
           <span>장바구니</span>
         </button>
-        <!--
-        <span class="quantity">0</span>
-        <div class="message">
-          <p>장바구니에 담긴 상품이 없습니다.</p>
-        </div>-->
+        <div class="cart--empty">
+          <span class="quantity">0</span>
+          <div class="message">
+            <p>장바구니에 담긴 상품이 없습니다.</p>
+          </div>
+        </div>
       <!--하단 버튼들-->
       <div class="TypeNavigation">
+        <a href="/">
           <div>
             <img src="/미션4/assets/icon/icon-rocket.svg" alt="로켓배송">
             <span>로켓배송</span>
           </div>
+        </a>
+        <a href="/">
           <div>
             <img src="/미션4/assets/icon/icon-fresh.svg" alt="로켓프레시">
             <span>로켓프레시</span>
           </div>
+        </a>
+        <a href="/">
           <div>
             <span>2022년 설날</span>
             <img src="/미션4/assets/icon/new.svg" alt="New">
           </div>
+        </a>
+        <a href="/">
           <div>로켓직구</div>
+        </a>
+        <a href="/">
           <div>골드박스</div>
+        </a>
+        <a href="/">
           <div>정기배송</div>
+        </a>
+        <a href="/">
           <div class="long">이벤트/쿠폰</div>
+        </a>
+        <a href="/">
           <div class="short">기획전</div>
+        </a>
+        <a href="/">
           <div>여행티켓</div>
+        </a>
       </div>
     </div>
   </header>

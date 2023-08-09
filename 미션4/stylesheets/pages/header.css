@@ -2,7 +2,6 @@
 .LoginBar {
     height: 24px;
     background: var(--gray-100, #F3F3F3);
-    width: 1920px;
     height: 34px;
     display: flex;
     justify-content: center;
@@ -10,6 +9,8 @@
     flex-shrink: 0;
 }
 .LoginBarList {
+    padding: 0;
+    width: 1080px;
     display: flex;
     height: 24px;
     justify-content: center;
@@ -29,8 +30,11 @@
 }
 
 .LoginBarList li:first-child {
-    margin-left: 728px;
     order: 3;
+}
+
+.LoginBarList .first a {
+    margin-left: 728px;
 }
 
 .LoginBarList li:nth-child(2) {
@@ -43,10 +47,11 @@
 
 .MainHeader {
     display: grid;
+    grid-template-columns: 110px 246px 516px 84px 65px;
+    grid-template-rows: 74px 36px;
     grid-template-areas: 
     "bc lg se mc ca"
     "bc tn tn mc ca";
-
 }
 
 .button--category {
@@ -99,7 +104,7 @@
     border: 1px solid blue;
     height: 42px;
     flex-shrink: 0;
-    width: 520px;
+    width: 516px;
     margin-top: 34px;
     grid-area: se;
 }
@@ -169,9 +174,8 @@
 }
 
 .personal {
-    width: 90px;
-    height: 58px;
-    padding: 0px 22px 4px 22px;
+    width: 45px;
+    padding: 0;
     background-image: url(/미션4/assets/icon/my-coupang.svg);
     background-repeat: no-repeat;
     background-position: top center;
@@ -184,27 +188,35 @@
     font-weight: 400;
     line-height: 120%;
     margin-top: 34px;
+    height: 200px;
 }
 
 .myCoupang {
+    margin-left: 46.5px;
     grid-area: mc;
+
 }
 
 .cart {
     background-image: url(/미션4/assets/icon/cart.svg);
     grid-area: ca;
+    margin-left: 20px;
 }
 
 .personal span {
     display: inline-block;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 20px;
+    position: relative;
+    top: -67px;
 }
 
 .TypeNavigation {
+    margin-top: 10px;
     height: 26px;
-    width: 755px;
+    width: 757px;
     grid-area: tn;
+    margin-left: 36px;
 }
 
 .TypeNavigation div{
@@ -219,7 +231,6 @@
     line-height: 120%;
     height: 26px;
     padding: 6px 14px;
-    text-align: center;
 }
 
 .TypeNavigation .long {
@@ -228,4 +239,8 @@
 
 .TypeNavigation .short {
     padding: 6px 20px 6px 19px;
+}
+
+.is--active, .cart--empty {
+    display: none;
 }
